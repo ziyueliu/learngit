@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="renderer" content="webkit"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>易班专题</title>
+		<link rel="stylesheet" href="css/reset.css">
+	    <link rel="stylesheet" href="css/style.css">
+	    <link rel="stylesheet" href="css/swiper.min.css">
+	    <link rel="stylesheet" href="css/animate.min.css">
+	    <style type="text/css">
+	    /* music */
+	    @-webkit-keyframes reverseRotataZ{
+	        0%{-webkit-transform: rotateZ(0deg);}
+	        100%{-webkit-transform: rotateZ(-360deg);}
+	    }
+	    @-webkit-keyframes rotataZ{
+	        0%{-webkit-transform: rotateZ(0deg);}
+	        100%{-webkit-transform: rotateZ(360deg);}
+	    }
+	    #musicControl { position:fixed;right:10px;top:20px;margin-top:0;display:inline-block;z-index:99999999;}
+	    #musicControl a { display:inline-block;width: 25px; height: 25px; overflow:hidden; background:url('music/mcbg.png') no-repeat; background-size:100%;}
+	    #musicControl a audio{width:100%;height:56px;}
+	    #musicControl a.stop { background-position:left bottom;}
+	    #musicControl a.on { background-position:0px 1px;-webkit-animation: reverseRotataZ 1.2s linear infinite;}
+	    </style>
+
+	    
+	</head>
+	<body>
+		<!--音乐播放-->
+		<span id="musicControl">
+		    <a id="mc_play" class="stop on" onclick="play_music();">
+		        <audio id="musicfx" loop="loop" autoplay="autoplay">
+		            <source src="music/久石让 - Going Out - 钢琴版纯音乐.mp3" type="audio/mpeg">
+		        </audio>
+		    </a>
+		</span>
+
+		<div class="swiper-container">
+		        <div class="swiper-wrapper">
+			        <!-- 第一屏 -->
+		            <section class="swiper-slide swiper-slide1">
+			            <div class="title-top ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">
+			            	<p class="center">《易班校本化平台》</p>
+			            	<p class="bottom">易班校本化平台是一款为实现高校智慧校园建设，顺利开展网络思想政治教育，并具有本校特色的管理类软件。</p>
+			            </div>
+			            <div class="cloud-1 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="5s" swiper-animate-delay="0s">
+			            	<img src="images/one-cloud1.png" alt="" />
+			            </div>
+			            <div class="cloud-2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="5s" swiper-animate-delay="0s">
+			            	<img src="images/one-cloud2.png" alt="" />
+			            </div>
+			            <div class="bg-item ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+			            	<img src="images/one-bg.png" alt="" />
+			            </div>
+			            <div class="dialog-item ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="2s">
+			            	<img src="images/one-dialog.png" alt="" />
+			            </div>
+			            <div class="phone-item ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">
+			            	<img src="images/one-phone.png" alt="" />
+			            </div>
+			            <img src="images/arrow.png" id="array" alt="图标" />
+		            </section>
+		            <!-- 第二屏 -->
+		            <section class="swiper-slide swiper-slide2">
+		            	<div class="title-item ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="0s">
+		            		<img src="images/two-title.png" alt="" />
+		            	</div>
+		            	<div class="block-item ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+		            		<img src="images/two-block.png" alt="" />
+		            	</div>
+		            	
+		            	<div class="cloud-1 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="1.2s">
+		            		<img src="images/two-clound1.png" alt="" />
+		            	</div>
+		            	<div class="cloud-2 ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.2s">
+		            		<img src="images/two-clound2.png" alt="" />
+		            	</div>
+		            	<div class="swiper-container2 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+		            	    <div class="swiper-wrapper">
+		            	        <div class="swiper-slide" style="background-image:url('images/two-banner2.png')">
+		            	        	<div class="text-item ani">
+		            	        		<p><span class="color">易班网：</span>易班头条、易班大学、班级动态、易班学院、优课YOOC...</p>
+		            	        	</div>
+		            	        </div>
+		            	        <div class="swiper-slide" style="background-image:url('images/two-banner3.png')">
+		            	        	<div class="text-item ani">
+		            	        		<p><span class="color">学工系统：</span>奖助贷、勤工俭学、迎新服务、辅导员考核、综合测评、晚点汇报...</p>
+		            	        	</div>
+		            	        </div>
+		            	        <div class="swiper-slide" style="background-image:url('images/two-banner4.png')">
+		            	        	<div class="text-item ani">
+		            	        		<p><span class="color">校内系统：</span>教务系统、校社区论坛、后勤系统、财务系统、就业系统、图书管理系统...</p>
+		            	        	</div>
+		            	        </div>
+		            	        <div class="swiper-slide" style="background-image:url('images/two-banner1.png')">
+		            	        	<div class="text-item ani">
+		            	        		<p><span class="color">开放平台：</span>大学生医保平台、勤工俭学平台、教育培训平台、校友平台、志愿者平台、创业就业平台...</p>
+		            	        	</div>
+		            	        </div>
+		            	    </div>
+		            	    <div class="swiper-button-prev"></div>
+		            	    <div class="swiper-button-next"></div>
+		            	</div>
+		            	<div class="bg-item ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+		            		<img src="images/two-bgImg.png" alt="" />
+		            	</div>
+		            	<div class="shadow-item ani">
+		            		<img src="images/two-shadow.png" alt="" />
+		            	</div>
+		            	<img src="images/arrow.png" id="array" alt="图标" />
+		            	<!-- <div class="bottom-item ani">
+		            		<p>开放平台</p>
+		            	</div> -->
+		            </section>
+		            <!-- 第三屏 -->
+		            <section class="swiper-slide swiper-slide3">
+		            	<div class="title-item ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="0s">
+		            		<img src="images/three-title.png" alt="" />
+		            	</div>
+		            	<div class="block-item ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+		            		<img src="images/two-block.png" alt="" />
+		            	</div>
+		            	<div class="cloud-1 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.8s">
+		            		<img src="images/one-cloud1.png" alt="" />
+		            	</div>
+		            	<div class="cloud-2 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.8s">
+		            		<img src="images/one-cloud2.png" alt="" />
+		            	</div>
+		            	<div class="swiper-container3 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0s">
+		            	    <div class="swiper-wrapper">
+		            	        <div class="swiper-slide" style="background-image:url('images/three-box1.png')"></div>
+		            	        <div class="swiper-slide" style="background-image:url('images/three-box8.png')"></div>
+		            	        <div class="swiper-slide" style="background-image:url('images/three-box7.png')"></div>
+		            	        <div class="swiper-slide" style="background-image:url('images/three-box3.png')"></div>
+		            	        <div class="swiper-slide" style="background-image:url('images/three-box2.png')"></div>
+		            	        <div class="swiper-slide" style="background-image:url('images/three-box5.png')"></div>
+		            	        <div class="swiper-slide" style="background-image:url('images/three-box6.png')"></div>
+		            	        <div class="swiper-slide" style="background-image:url('images/three-box4.png')"></div>
+		            	        
+		            	        
+		            	    </div>
+		            	    <div class="swiper-pagination2"></div>
+		            	</div>
+		            	<div class="bg-item ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+		            		<img src="images/three-bg.png" alt="" />
+		            	</div>
+		            	<img src="images/arrow.png" id="array" alt="图标" />
+		            </section>
+		            <!-- 第四屏 -->
+		            <section class="swiper-slide swiper-slide4">
+		            	<div class="title-item ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="0s">
+		            		<img src="images/four-title.png" alt="图片" />
+		            	</div>
+		            	<div class="block-item ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+		            		<img src="images/two-block.png" alt="图片" />
+		            	</div>
+		            	<div class="cloud-1 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.8s">
+		            		<img src="images/one-cloud2.png" alt="图片" />
+		            	</div>
+		            	<div class="cloud-2 ani">
+		            		<img src="images/two-clound1.png" alt="图片" />
+		            	</div>
+		            	<div class="cloud-3 ani">
+		            		<img src="images/two-clound2.png" alt="图片" />
+		            	</div>
+		            	<div class="text-item ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+		            		<div class="item1 box" >
+		            			<p>1、平台与易班网直通，实现无缝对接</p>
+		            		</div>
+		            		<div class="item2 box" >
+		            			<p>2、强大的消息盒子，校方通知，一键发送消息必达，高效便捷；</p>
+		            		</div>
+		            		<div class="item3 box" >
+		            			<p>3、自带标准化学工子平台，为学生工作管理提供全方位信息化服务；</p>
+		            		</div>
+		            		<div class="item4 box" >
+		            			<p>4、提供高效的共享子平台接口，可快速实现与高校现有业务系统的对接；</p>
+		            		</div>
+		            		<div class="item5 box" >
+		            			<p>5、融合了各类丰富的扩展应用，如勤工俭学、教育培训、创业就业等。</p>
+		            		</div>
+		            	</div>
+		            	<div class="bg-item ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+		            		<img src="images/four-bg.png" alt="图片" />
+		            	</div>
+		            	<img src="images/arrow.png" id="array" alt="图标" />
+		            </section>
+                    <!-- 第五屏 -->
+		            <section class="swiper-slide swiper-slide5">
+			            <div class="title-item ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="0s">
+			            	<img src="images/five-title.png" alt="图片" />
+			            </div>
+			            <div class="block-item ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+			            	<img src="images/two-block.png" alt="图片" />
+			            </div>
+			            <div class="cloud-1 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.8s">
+			            	<img src="images/one-cloud2.png" alt="图片" />
+			            </div>
+			            <div class="text-item ani" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+			            	<div class="item1 box">
+			            		<p><span class="color">实施服务:</span>基础数据整理等平台实施全过程的服务</p>
+			            		<p><span class="color">技术支持服务：</span>不限次数的电话、QQ 、邮件问题解答服务</p>
+			            		<p><span class="color">培训服务：</span>对用户的集中或分角色培训服务</p>
+			            		<p><span class="color">校纠错性服务：</span>对平台运行过程中出现的错误，进行分析、修复及避免措施</p>
+			            		<p><span class="color">集成指导：</span>为平台与第三方系统的对接，提供远程指导</p>
+			            		<p><span class="color">紧急故障相应：</span>对影响平台正常使用的突发性故障易消息为核心驱动，校内明确“易消息”为唯一通知渠道</p>
+			            	</div>
+			            	
+			            </div>
+			            <div class="bg-item ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+			            	<img src="images/five-bg.png" alt="图片" />
+			            </div> 
+			            <img src="images/arrow.png" id="array" alt="图标" />
+		            </section>
+		            <!-- 第六屏 -->
+		            <section class="swiper-slide swiper-slide6">
+		            	<div class="title-item ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="0s">
+		            		<img src="images/six-title.png" alt="图片" />
+		            	</div>
+		            	<div class="block-item ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+		            		<img src="images/two-block.png" alt="图片" />
+		            	</div>
+		            	<div class="cloud-1 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.8s">
+		            		<img src="images/one-cloud2.png" alt="图片" />
+		            	</div>
+		            	<div class="swiper-container4 ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+		            	    <div class="swiper-wrapper">
+		            	        <div class="swiper-slide" style="background-image:url('images/six-img1.png')"></div>
+		            	        <div class="swiper-slide" style="background-image:url('images/six-img2.png')"></div>
+		            	        <div class="swiper-slide" style="background-image:url('images/six-img3.png')"></div>
+		            	    </div>
+		            	    <div class="swiper-pagination3"></div>
+		            	</div>
+		            	<div class="cloud-2 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="1s">
+		            		<img src="images/two-clound1.png" alt="图片" />
+		            	</div>
+		            	<div class="cloud-3 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="1s">
+		            		<img src="images/two-clound2.png" alt="图片" />
+		            	</div>
+		            	<div class="cloud-4 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="1s">
+		            		<img src="images/two-clound1.png" alt="图片" />
+		            	</div>
+		            	<div class="cloud-5 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="1s">
+		            		<img src="images/two-clound2.png" alt="图片" />
+		            	</div>
+		            	<div class="cloud-6 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="1s">
+		            		<img src="images/two-clound1.png" alt="图片" />
+		            	</div>
+		            	<img src="images/arrow.png" id="array" alt="图标" />
+		            </section> 
+		            <!-- 第七屏 -->
+		            <section class="swiper-slide swiper-slide7">
+		            	<div class="title-item ani" swiper-animate-effect="fadeInDownBig" swiper-animate-duration="1s" swiper-animate-delay="0s">
+		            		<img src="images/seven-title.png" alt="图片" />
+		            	</div>
+		            	<div class="block-item ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+		            		<img src="images/two-block.png" alt="图片" />
+		            	</div>
+		            	<div class="cloud-1 ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.8s">
+		            		<img src="images/one-cloud2.png" alt="图片" />
+		            	</div>
+		            	<div class="line-item ani"  swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="1s">
+		            		<img src="images/seven-line.png" alt="图片" />
+		            	</div>
+		            	<div class="swiper-container5 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1s">
+		            	    <div class="swiper-wrapper">
+		            	        <div class="swiper-slide">
+		            	        	<div class="box clearfix">
+		            	        		<div class="fl">
+		            	        			<img src="images/seven-photo.png" alt="头像" />
+		            	        		</div>
+		            	        		<div class="fr">
+		            	        			<p><span class="color">潘*萍 </span>[福州大学]</p>
+		            	        			<p>以前从来都不知道易班，但用了之后发现还是不错的，就像为我们量身定做一样，挺喜欢的。</p>
+		            	        		</div>
+		            	        	</div>
+		            	        	<div class="box clearfix">
+		            	        		<div class="fl">
+		            	        			<img src="images/seven-photo.png" alt="头像" />
+		            	        		</div>
+		            	        		<div class="fr">
+		            	        			<p><span class="color">赵*阳 </span>[福州大学]</p>
+		            	        			<p>在此之前，我从来没有想过会有这样一个软件，可以包括这么多的功能；有一些地方还需要改进，期待~</p>
+		            	        		</div>
+		            	        	</div>
+		            	        </div>
+		            	        <div class="swiper-slide">
+		            	        	<div class="box clearfix">
+		            	        		<div class="fl">
+		            	        			<img src="images/seven-photo.png" alt="头像" />
+		            	        		</div>
+		            	        		<div class="fr">
+		            	        			<p><span class="color">李*文 </span>[福建工程学院]</p>
+		            	        			<p>用起来还是蛮方便的，包含了在校所要用到的所有功能，不过有一些小地方还是需要优化一下啦。</p>
+		            	        		</div>
+		            	        	</div>
+		            	        	<div class="box clearfix">
+		            	        		<div class="fl">
+		            	        			<img src="images/seven-photo.png" alt="头像" />
+		            	        		</div>
+		            	        		<div class="fr">
+		            	        			<p><span class="color">林*西 </span>[福建工程学院]</p>
+		            	        			<p>易班我知道，但是易班校本化我确实是第一次听说。挺实用的，不错。 </p>
+		            	        		</div>
+		            	        	</div>
+		            	        </div>
+
+		            	    </div>
+		            	</div>
+		            	<div class="cloud-2 ani">
+		            		<img src="images/two-clound1.png" alt="图片" />
+		            	</div>
+		            	<div class="cloud-3 ani">
+		            		<img src="images/two-clound1.png" alt="图片" />
+		            	</div>
+		            	<div class="cloud-4 ani">
+		            		<img src="images/two-clound1.png" alt="图片" />
+		            	</div>
+		            	<div class="cloud-5 ani">
+		            		<img src="images/two-clound1.png" alt="图片" />
+		            	</div>
+		            </section>
+		        </div>
+		         
+		    </div>
+		
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+	    var mySwiper = new Swiper ('.swiper-container', {
+	    	direction : 'vertical',
+	    	mousewheelControl : true,
+	    	onInit: function(swiper){
+	    		swiperAnimateCache(swiper);
+	    	    swiperAnimate(swiper);
+	    	},
+	    	onSlideChangeEnd: function(swiper){
+	    		swiperAnimate(swiper);
+	    	},
+	    	onTransitionEnd: function(swiper){
+	    		swiperAnimate(swiper);
+	    	},
+	    })     
+
+	    var swiperV = new Swiper('.swiper-container2', {
+	        nextButton: '.swiper-button-next',
+	        prevButton: '.swiper-button-prev',
+	        effect: 'flip',
+	        flip: {
+	            slideShadows : true,
+	            limitRotation : true,
+	        }
+	    });
+
+	    var swiperT = new Swiper('.swiper-container3', {
+	        pagination: '.swiper-pagination2',
+	        effect: 'flip',
+	        flip: {
+	            slideShadows : true,
+	            limitRotation : true,
+	        }
+	    });
+
+	    var swiperC = new Swiper('.swiper-container4', {
+	        pagination : '.swiper-pagination3',
+	        effect: 'coverflow',
+	        grabCursor: true,
+	        loop : true,
+            loopedSlides :6,
+	        centeredSlides: true,
+	        slidesPerView: 'auto',
+	        coverflow: {
+	            rotate: 50,
+	            stretch: 60,
+	            depth: 300,
+	            modifier: 1,
+	            slideShadows : false,
+	        }
+	    });
+
+	    var swiperS = new Swiper('.swiper-container5', {
+	        centeredSlides: true,
+	        autoplay: 5000,
+	        loop : true,
+	        autoplayDisableOnInteraction: false
+	    });
+	    	    
+        function play_music(){
+		    if ($('#mc_play').hasClass('on')){
+		        $('#mc_play audio').get(0).pause();
+		        $('#mc_play').attr('class','stop');
+		    }else{
+		        $('#mc_play audio').get(0).play();
+		        $('#mc_play').attr('class','on');
+		    }
+		}
+		function just_play(id){
+		    $('#mc_play audio').get(0).play();
+		    $('#mc_play').attr('class','on');
+		} 
+	    just_play() ;
+
+
+    </script>
+
+	</body>
+</html>
