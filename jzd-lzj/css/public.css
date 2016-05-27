@@ -1,0 +1,343 @@
+
+/* 文本超出显示省略号 */ 
+.ellipsis {
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+}
+
+/* 去除边框线 */
+.no-border {
+    border: none!important;
+}
+
+/* input type="date"样式 */
+.date-time {
+    background: none;
+    color: #a6a6a6;
+    width: 100%;
+    border: none;
+    outline: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    line-height: 3.8rem;
+    direction: rtl;
+    padding: 0.1rem 0;
+    height: 4rem;
+    float: right;
+}
+.select-icon {
+  display: block;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: 28%;
+  right: 1.6rem;
+  color: #a6a6a6;
+  font-size: 1.8rem;
+}
+
+/* input type="text"样式 */
+.input-text {
+    width: 100%;
+    height: 3rem;
+    text-align: right;
+    display: inline-block;
+    border: none;
+    outline: none;
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+}
+/* select样式 */
+.select-option {
+    border: none;
+    background: none;
+    outline: none;
+    color: #a6a6a6;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    direction: rtl;
+    text-align: right;
+    height: 4rem;
+    line-height: 3.8rem;
+    padding: 0.1rem 0;
+    padding-right: 0.6rem;
+    width: 100%;
+}
+
+/* textarea文本输入样式 */
+#dialog_textarea_content {
+  background-color: #f5f5f9;
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1.2rem;
+  padding-top: 1.2rem;
+  z-index: 9999999999;
+  width: 100%;
+  overflow: hidden;
+  cursor: default;
+}
+#dialog_textarea_content .dialog-textarea-input {
+  background-color: #fff;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+}
+#dialog_textarea_content .dialog-textarea-input textarea {
+  width: 100%;
+  border: none;
+  word-wrap: break-word;
+  word-break: break-all;
+  outline: none;
+  padding: 0.8rem;
+  color: #c9c9c9;
+}
+#dialog_textarea_content .text-number {
+    padding-top: 0.6rem;
+    color: #c9c9c9;
+    font-size: 1.4rem;
+}
+#dialog_textarea_content .text-number .color {
+    color: #2cc5ff;
+}
+#dialog_textarea_content .dialog-textarea-submit .submit {
+  display: block;
+  background-color: #2cc5ff;
+  width: 100%;
+  height: 4rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 4rem;
+  font-size: 1.6rem;
+  margin-top: 3rem;
+}
+
+/* ------------- 弹出框样式 ------------- */
+#public_dialog {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999999999;
+  padding: 0 2rem;
+  display: none;
+}
+#public_dialog .dialog-wrap {
+  background-color: #fff;
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10rem;
+  text-align: center;
+  display: none;
+}
+#public_dialog .dialog-wrap h2 {
+  font-weight: bold;
+  height: 4rem;
+  line-height: 4rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+#public_dialog .dialog-wrap p {
+  height: auto;
+  padding:3rem 1.5rem;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+#public_dialog .dialog-wrap .confirm {
+  height: 4rem;
+  line-height: 4rem;
+  color: #20b2eb;
+}
+#public_dialog .dialog-wrap .confirm .text{
+  width: 100%;
+  display: block;
+}
+#public_dialog .dialog-wrap .confirm .fl {
+  width: 50%;
+  border-right: 1px solid #e5e5e5;
+}
+#public_dialog .dialog-wrap .confirm .fr {
+  width: 50%;
+}
+/* ------------- 弹出框样式结束 ------------- */
+
+/* ------------- liIndex全局样式 ------------- */
+.liIndex-content {
+    height: 5rem;
+    line-height: 5rem;
+    position: relative;
+    margin-left: 1.2rem;
+    font-size: 1.4rem;
+}
+/* liIndex左边内容样式 */
+.liIndex-left {
+    margin: 1.2rem auto 0;
+    font-size: 1.6rem;
+    width: 16%;
+    text-align: center;
+}
+.liIndex-left .circle-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    background: #ffb459;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.6rem;
+    color: #fff;
+    margin-left: 15%;
+}
+/* liIndex右边内容样式 */
+.liIndex-right {
+    color: #333;
+    position: relative;
+    width: 84%;
+    padding-right: 1.2rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+.liIndex-right .fa {
+    font-size: 1.8rem;
+    line-height: 5rem;
+    color: #c7c7cc;
+}
+/* ------------- liIndex全局样式结束 ------------- */
+
+/* ------------- li全局样式 ------------- */
+/* li全局样式 */
+.li-content {
+    height: 4rem;
+    line-height: 4rem;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 1.4rem;
+    background: #fff;
+}
+/* li左边内容样式 */
+.li-left {
+    width: 50%;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 1.2rem;
+    color: #333;
+}
+/* li右边内容样式 */
+.li-right {
+    width: 50%;
+    text-align: right;
+    padding-right: 1.2rem;
+    color: #a6a6a6;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+/* 去除背景 */
+.gray-bg {
+    background: #f6f5fa;
+    padding-left: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    width: 100%;
+}
+/* ------------- li全局样式结束 ------------- */
+
+/* ------------- 顶部下拉列表全局样式 ------------- */
+#tab_select {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  z-index: 99999;
+}
+#tab_select li {
+  width: 33.33%;
+  height: 4rem;
+  line-height: 4rem;
+  float: left;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#tab_select li .list-tab {
+  width: 80%;
+  height: 4rem;
+  position: relative;
+  margin: 0 auto;
+}
+#tab_select li .val {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: left;
+}
+#tab_select li .fa {
+  position: absolute;
+  top: 34%;
+  right: 0;
+}
+#tab_select .devid {
+  height: 2rem;
+  width: 1px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 1rem;
+  left: 33.3%;
+}
+#tab_select .devid2 {
+  height: 2rem;
+  width: 1px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 1rem;
+  left: 66.6%;
+}
+.tab-select-content {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+  cursor: pointer;
+}
+.tab-select-content ul {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  display: none;
+}
+.tab-select-content ul li {
+  height: 4rem;
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 4rem;
+  color: #333;
+  padding-left: 1.5rem;
+  cursor: pointer;
+}
+.tab-select-content ul li:hover {
+  color: #20b2eb;
+}
+/* ------------- 顶部下拉列表全局样式结束 ------------- */

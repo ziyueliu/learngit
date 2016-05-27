@@ -1,0 +1,272 @@
+/* 国奖-励志奖*/
+#gj {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f6f5fa;
+}
+#gj .gj-list ul {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+/* 国奖-在线申请*/
+#gj-zxsq {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f6f5fa;
+}
+#gj-zxsq a {
+  display: block;
+}
+#gj-zxsq .gj-zxsq-list {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 1.5rem;
+}
+#gj-zxsq .gj-zxsq-list ul {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+#gj-zxsq .gj-zxsq-list ul li:last-child {
+  border: none;
+}
+#gj-zxsq .gj-zxsq-list ul .li-right .text {
+  padding-right: 1rem;
+}
+#gj-zxsq .gj-zxsq-list ul .li-right .fa {
+  font-size: 1.8rem;
+  line-height: 4rem;
+  position: absolute;
+  top: 0;
+  right: 1.2rem;
+}
+#gj-zxsq .gj-zxsq-footer {
+  position: relative;
+  text-align: center;
+  padding: 1.2rem;
+  padding-bottom: 4.6rem;
+}
+#gj-zxsq .gj-zxsq-footer p {
+  font-size: 1.4rem;
+  color: #a6a6a6;
+}
+#gj-zxsq .gj-zxsq-footer .btn-list {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#gj-zxsq .gj-zxsq-footer .btn-list li {
+  width: 50%;
+  background-color: #2cc5ff;
+  height: 4rem;
+  line-height: 4rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  border-right: 1px solid #fff;
+}
+#gj-zxsq .gj-zxsq-footer .btn-list li:active {
+  background: #26b0e4;
+}
+/* 国奖-在线申请-国奖申请*/
+#gj-zxsq-gjsq {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f6f5fa;
+}
+#gj-zxsq-gjsq a {
+  display: block;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-list ul {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-list ul .li-left {
+  width: 40%;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-list ul .li-right {
+  width: 60%;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-list ul li:last-child {
+  border: none;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-list ul .select-hidden {
+  display: none;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-list ul .li-right .text {
+  padding-right: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-list ul .li-right .fa {
+  font-size: 1.8rem;
+  line-height: 4rem;
+  position: absolute;
+  top: 0;
+  right: 1.2rem;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-footer {
+  position: relative;
+  padding: 1.2rem;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-footer p {
+  font-size: 1.4rem;
+  color: #a6a6a6;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-footer .btn-icon {
+  height: 4rem;
+  line-height: 4rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  border-radius: 0.4rem;
+  background-color: #2cc5ff;
+  margin-top: 1rem;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-footer .btn-icon:active {
+  background: #26b0e4;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f6f5fa;
+  display: none;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-dialog .btn-dialog {
+  height: 4rem;
+  line-height: 4rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  border-radius: 0.4rem;
+  background-color: #2cc5ff;
+  margin: 1.2rem;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-dialog .btn-dialog:active {
+  background: #26b0e4;
+}
+#gj-zxsq-gjsq .gj-zxsq-gjsq-dialog-textarea {
+  display: none;
+}
+/* 国奖-申请记录*/
+#gj-sqjl {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f6f5fa;
+}
+#gj-sqjl a {
+  display: block;
+}
+#gj-sqjl .gj-sqjl-list ul {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+#gj-sqjl .gj-sqjl-list ul li:last-child {
+  border: none;
+}
+#gj-sqjl .gj-sqjl-list ul .li-right .text {
+  padding-right: 1rem;
+}
+#gj-sqjl .gj-sqjl-list ul .li-right .fa {
+  font-size: 1.8rem;
+  line-height: 4rem;
+  position: absolute;
+  top: 0;
+  right: 1.2rem;
+}
+/* 国奖-审核进程*/
+#gj-shjc {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f6f5fa;
+}
+#gj-shjc .gj-shjc-list {
+  position: relative;
+  padding: 1.2rem 0 1.2rem 1.2rem;
+}
+#gj-shjc .gj-shjc-list li {
+  height: 6.5rem;
+  width: 100%;
+  line-height: 6.5rem;
+  position: relative;
+}
+#gj-shjc .gj-shjc-list li .left {
+  width: 14%;
+  text-align: center;
+}
+#gj-shjc .gj-shjc-list li .left .line-one {
+  background: #b1b1b1;
+  width: 1px;
+  height: 1.5rem;
+  margin: 0 auto;
+}
+#gj-shjc .gj-shjc-list li .left .line-two {
+  background: #b1b1b1;
+  width: 1px;
+  height: 1.5rem;
+  margin: 0 auto;
+}
+#gj-shjc .gj-shjc-list li .left .big-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #e2e2e4;
+  border-radius: 50%;
+  margin: 0.5rem auto;
+  text-align: center;
+  position: relative;
+}
+#gj-shjc .gj-shjc-list li .left .big-circle span {
+  font-size: 1.2rem;
+  position: absolute;
+  top: -1.96rem;
+  left: 1rem;
+}
+#gj-shjc .gj-shjc-list li .left .circle-color {
+  background: rgba(44, 197, 255, 0.5);
+}
+#gj-shjc .gj-shjc-list li .left .circle-bgColor {
+  background: #2cc5ff;
+  color: #fff;
+}
+#gj-shjc .gj-shjc-list li .right {
+  line-height: 1rem;
+  padding-left: 3%;
+  color: #666;
+  padding-top: 1.8rem;
+  width: 86%;
+}
+#gj-shjc .gj-shjc-list li .right .right-box {
+  height: 4rem;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-right: none;
+  font-size: 1.4rem;
+  margin-top: -0.6rem;
+  line-height: 4rem;
+  padding: 0 1rem;
+}
+#gj-shjc .gj-shjc-list li .right .right-box h3 {
+  padding-top: 0.6rem;
+}
+#gj-shjc .gj-shjc-list li .right .right-box span {
+  color: #a6a6a6;
+}
+#gj-shjc .gj-shjc-list li .right .right-box .fa {
+  line-height: 4rem;
+  padding-left: 0.6rem;
+}
+#gj-shjc .gj-shjc-list li .right .right-box .color {
+  color: #2cc5ff;
+}
