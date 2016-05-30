@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>  
+<title>test</title> 
+<meta charset="UTF-8">  
+<style>
+body{color:#999;font:12px/1.5 Tahoma;}
+#outer{width:500px;margin:0 auto;}
+#outer input{padding:3px;border:1px solid #ccc;font-family:inherit;width:220px;margin-right:10px;}
+.sum{font-size:30px;color:red;}
+
+</style>
+
+</head>  
+<body>  
+	<div id="outer">
+	    <label><input type="text" value="1,2,3" /><span>输入数字求和，数字之间用半角","号分隔</span></label>
+	    <p><button>求和</button></p>
+	    <strong class="sum"></strong>
+	</div>
+
+
+
+	<script>
+		window.onload=function(){
+			var val=document.getElementsByTagName('input')[0];
+			var oBtn=document.getElementsByTagName('button')[0];
+			var oSum=document.getElementsByTagName('strong')[0];
+			
+			val.onkeyup=function  (argument) {
+				this.value = this.value.replace(/[^(\d)|(,)]/,""); 
+			}
+			oBtn.onclick=function(){
+				var sum=0;
+				var add=val.value.split(",");
+				
+				for(var j in add) {
+					sum+= parseInt(add[j]);
+				}
+				oSum.innerHTML=sum;
+			}
+
+		}
+
+	</script>
+
+</body>
+</html>

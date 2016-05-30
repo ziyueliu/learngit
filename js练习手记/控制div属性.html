@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>  
+<title>test</title> 
+<meta charset="UTF-8">  
+<style>
+#outer{width:500px;margin:0 auto;padding:0;text-align:center;}
+#div1{width:100px;height:100px;background:black;margin:10px auto;display:block;}
+</style>
+
+</head>  
+<body>  
+	<div id="outer">
+		<input type="button" value="变宽" />
+		<input type="button" value="变高" />
+		<input type="button" value="变色" />
+		<input type="button" value="隐藏" />
+		<input type="button" value="重置" />
+		<div id="div1"></div>
+	</div>
+
+	<script>
+		var change=function(ele,attr,val){
+			ele.style[attr]=val;
+		}
+
+		window.onload=function(){
+			var outer=document.getElementById('outer');
+			var input=outer.getElementsByTagName('input');
+			var div1=document.getElementById('div1');
+			var arr1=['width','height','background','display','display'];
+			var arr2=['200px','200px','red','none','block'];
+
+			for(var i=0;i<input.length;i++) {
+				input[i].index=i;
+
+				input[i].onclick=function(){
+					if(this.index == input.length - 1 ){
+						div1.style.cssText = "";
+					}
+					change( div1,arr1[this.index],arr2[this.index] )
+				}
+			}
+		}
+	</script>
+
+</body>
+</html>
