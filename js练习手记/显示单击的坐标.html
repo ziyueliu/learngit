@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>  
+<title>test</title> 
+<meta charset="UTF-8">  
+<style>
+
+</style>
+
+</head>  
+<body>  
+    <div id="star">
+        点击页面弹出坐标
+    </div>
+
+
+<script>
+   window.onload=function () {
+        document.onclick=function (e) {
+            var e=event||window.event;
+             alert('横坐标:'+e.clientX+',纵坐标:'+e.clientY)
+        }
+   }
+
+</script>
+
+</body>
+</html>

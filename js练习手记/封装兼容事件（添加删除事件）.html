@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>  
+<title>test</title> 
+<meta charset="UTF-8">  
+<style>
+pre{color:green;padding:10px 15px;background:#f0f0f0;border:1px dotted #333;font:12px/1.5 Courier New;}
+span{color:#999;}
+</style>
+
+</head>  
+<body>  
+    <center><input type="button" value="毫无用处的按钮"> <input type="button" value="绑定click"> <input type="button" value="解除绑定"></center>
+
+<script>
+   var addEventFn={
+        addEv:function (ele,oEv,fn) {
+             ele.addEventListener?ele.addEventListener(oEv, fn,false):ele.attachEvent('on'+oEv,fn);
+        },
+        removeEv:function (ele,oEv,fn) {
+             ele.removeEventListener?ele.removeEventListener(oEv,fn,false):ele.detachEvent('on'+oEv,fn);
+        },
+        addLoad:function (fn) {
+             this.addEv(window,'load',fn);
+        }
+   }
+
+   addEventFn.addLoad(function () {
+        var oInput=document.getElementsByTagName('input');
+
+        addEventFn.addEv(oInput[1],'click',function () {
+            oInput[0].value='我可以点击了';
+            addEventFn.addEv(oInput[0],'click',handle)
+        })
+
+
+        addEventFn.addEv(oInput[2],'click',function () {
+             oInput[0].value='毫无用处的按钮';
+             addEventFn.removeEv(oInput[0],'click',handle);
+        })
+
+        function handle (argument) {
+             alert('我可以点击了'); 
+        }
+   })
+
+
+
+
+
+</script>
+
+</body>
+</html>
