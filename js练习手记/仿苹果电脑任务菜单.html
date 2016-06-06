@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>  
+<title>test</title> 
+<meta charset="UTF-8">  
+<style type="text/css">
+body{margin:0;padding:0;}
+#menu{position:absolute;width:100%;bottom:0;text-align:center;}
+</style>
+
+
+</head>  
+<body>  
+    <div id="menu">
+        <img src="img/1.png" />
+        <img src="img/1.png" />
+        <img src="img/1.png" />
+        <img src="img/1.png" />
+        <img src="img/1.png" />
+        <img src="img/1.png" />
+        <img src="img/1.png" />
+        <img src="img/1.png" />
+    </div>
+
+
+<script>
+   window.onload=function () {
+        var oMenu=document.getElementById('menu');
+        var oImg=oMenu.getElementsByTagName('img');
+        var aWid=[];
+        for (var i = 0; i < oImg.length; i++) {
+            aWid.push(oImg[i].offsetWidth);
+            oImg[i].width= parseInt(oImg[i].offsetWidth/2);
+        }
+
+        document.onmousemove=function (e) {
+             var e=e||window.event;
+             for (var i = 0; i < oImg.length; i++) {
+                var a = event.clientX - oImg[i].offsetLeft - oImg[i].offsetWidth / 2;
+                var b = event.clientY - oImg[i].offsetTop - oMenu.offsetTop - oImg[i].offsetHeight / 2;
+                var iScale = 1 - Math.sqrt(a * a + b * b) / 300;
+                if (iScale < 0.5) iScale = 0.5;
+                oImg[i].width = aWid[i] * iScale
+
+             }
+        }
+
+   }
+
+</script>
+
+</body>
+</html>
